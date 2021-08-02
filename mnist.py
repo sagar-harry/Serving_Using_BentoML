@@ -13,7 +13,7 @@ classes = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight
 device = torch.device('cpu')   
 
 @bentoml.env(infer_pip_packages=True)
-@bentoml.artifacts([PytorchModelArtifact("mnist_pred")])
+@bentoml.artifacts([PytorchModelArtifact("model")])
 
 class numberClassifier(bentoml.BentoService):
     @bentoml.api(ImageHandler)
